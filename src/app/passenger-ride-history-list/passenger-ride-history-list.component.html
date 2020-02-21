@@ -1,0 +1,61 @@
+<div class="row page-tilte align-items-center">
+  
+  <div class="col-md-auto">
+    <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
+    <h1 class="weight-300 h3 title">Rides for {{passenger_name}}</h1>
+    <p class="text-muted m-0 desc"></p>
+  </div>
+
+</div>
+
+<div class="content">
+  <table datatable [dtOptions]="dtOptions"  [dtTrigger]="dtTrigger" id="example"  class="table table-striped mb-4 bg-white table-bordered">
+    <thead>
+      <tr>
+        <th translate>ride_list_id</th>
+        <th translate>ride_list_passenger</th>
+        <th translate>ride_list_service_area</th>
+        <th translate>ride_list_pickup_location</th>
+        <th translate>ride_list_drop_location</th>
+        <th translate>ride_list_booking_time</th>
+        <th translate>ride_list_status</th>
+        <th translate>ride_list_action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ride of passenger_ride">
+        <td>{{ride.ID}}</td>
+        <td>{{ride.PassengerName}}</td>
+        <td>{{ride.ServiceArea}}</td>
+        <td>{{ride.PickupLocation}}</td>
+        <td>{{ride.DropLocation}}</td>
+        <td>{{ getFormattedDateTime(ride.RideDateTime) }}</td>
+        <td><span [style.color]="getStatusColor(ride.RideStatus)">{{ getRideStatusText(ride.RideStatus) }}</span></td>
+        <td>
+            <button type="button" style="cursor:pointer;" class="btn mb-2 flat btn-sm btn-outline-success" (click)="navigateToRideDetail(ride.ID)" routerLinkActive="router-link-active" translate>ride_list_view</button>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <div class="loader-wrapper incomponent" id="demoCardLoader" [style.display]="isLoading? 'block':'none'">
+    <div class="spinner">
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="length" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+    </div>
+  </div>
+  
+</div>

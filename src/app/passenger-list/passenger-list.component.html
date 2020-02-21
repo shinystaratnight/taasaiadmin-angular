@@ -1,0 +1,50 @@
+<div class="row page-tilte align-items-center">
+  
+  <div class="col-md-auto">
+    <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
+    <h1 class="weight-300 h3 title" translate>passenger_list</h1>
+    <p class="text-muted m-0 desc"></p>
+  </div>
+</div>
+<div class="content">
+  <table datatable [dtOptions]="dtOptions"  [dtTrigger]="dtTrigger" id="example"  class="table table-striped mb-4 bg-white table-bordered">
+    <thead>
+      <tr>
+        <th translate>passenger_list_id</th>
+        <th translate>passenger_list_name</th>
+        <th translate>passenger_list_mobile</th>
+        <th data-orderable="false">passenger_list_status</th>
+        <th data-orderable="false">passenger_list_action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Passenger of Passengers">
+        <td>{{Passenger.ID}}</td>
+        <td>{{Passenger.Name}}</td>
+        <td>{{Passenger.DialCode+" "+Passenger.MobileNumber}}</td>
+        <td>{{Passenger.IsActive}}</td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm" style="margin-right:10px;" (click) = "onViewPassengerHistory(Passenger.ID,Passenger.Name)" translate>passenger_list_ride_history</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="loader-wrapper incomponent" id="demoCardLoader" [style.display]="isLoading? 'block':'none'">
+    <div class="spinner">
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="length" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+      <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+      </svg>
+    </div>
+  </div>
+  
+</div>

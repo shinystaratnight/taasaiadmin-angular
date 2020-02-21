@@ -1,0 +1,108 @@
+<div class="row page-tilte align-items-center">
+
+  <div class="col-md-auto">
+    <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span
+        class="material-icons">keyboard_arrow_down</span></a>
+    <h1 class="weight-300 h3 title">{{driver_name}}</h1>
+    <p class="text-muted m-0 desc"></p>
+  </div>
+
+</div>
+<div class="content">
+
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="card mb-4">
+                <div class="card-header" translate>vehicle_assign_title</div>
+                    <div class="card-body">
+                        <form [formGroup]="assignVehicleForm">
+                            <div class="form-group">
+                  
+                                <label for="sel1" translate>vehicle_assign_number</label>
+                                <!--ng-select [(ngModel)]="vehicle_id" formControlName="vehicle_id">
+                                  <ng-option *ngFor="let vehicle of vehicles" [value]="{{vehicle.vehicle_id}}" >{vehicle.vehicle_name+" - "+vehicle.vehicle_number}}</ng-option>
+                                 
+                              </ng-select-->
+                                    
+                                <select class="form-control" formControlName="vehicle_id" name="vehicle_id"  [(ngModel)]="vehicle_id" [ngClass]="{'is-invalid': submitted && f.vehicle_id.errors}">
+                                  <option [ngValue]="undefined" disabled  selected>Select Vehicle Number</option>
+                                  <option *ngFor="let vehicle of vehicles" value="{{vehicle.vehicle_id}}">{{vehicle.vehicle_name+" - "+vehicle.vehicle_number}}</option>
+                                </select>
+                                <div *ngIf="submitted && f.vehicle_id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.vehicle_id.errors.required" translate>vehicle_assign_number_required</div>
+                                </div>
+                          </div>
+                          
+                          <div class="form-group">
+                              <span><button (click)="onSubmit()" class="btn btn-primary" translate>vehicle_assign_submit</button></span>
+                          </div>   
+                        </form>
+                    </div>
+                </div>
+              </div>
+         </div> 
+
+         <div>
+          <h1 class="weight-300 h3 title" translate>assign_vehicle_list</h1>
+            <table datatable  [dtTrigger]="dtTrigger" id="example"  class="table table-striped mb-4 bg-white table-bordered">
+              <thead>
+                <tr>
+                  <th translate>assign_vehicle_id</th>
+                  <th translate>assign_vehicle_name</th>
+                  <th translate>assign_vehicle_number</th>
+                  <th data-orderable="false" translate>assign_vehicle_image</th>
+                  <th data-orderable="false" translate>assign_vehicle_status</th>
+                  <th data-orderable="false" translate>assign_vehicle_action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let assign of assigns">                   
+                  <td>{{assign.ID}}</td>
+                  <td>{{assign.Name}}</td>
+                  <td>{{assign.VehicleNumber}}</td>
+                  <td><img src="{{'http://35.197.237.60:4001/'+assign.Image}}" height="30" width="40"/></td>
+                  <td>
+                    <span [hidden]="!assign.IsActive" class="badge badge-pill badge-success" style="padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;color:#FFFFFF;font-size: 12px;" translate>assign_vehicle_enabled</span>
+                    <span [hidden]="assign.IsActive" class="badge badge-pill badge-danger" style="padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;color:#FFFFFF;font-size: 12px;" translate>assign_vehicle_disabled</span>
+                  </td>
+                  <td>
+                    <button [hidden]="assign.IsActive" type="button" class="btn mb-2 flat btn-sm btn-outline-success" (click)=enableVehicleAssign(assign.ID,assign.Name) translate>assign_vehicle_enable</button>
+                    <button [hidden]="!assign.IsActive" type="button" class="btn mb-2 flat btn-sm btn-outline-danger" (click)="openModal(manageVehicleAssignment_disable_modal)" translate>assign_vehicle_disable</button>
+                    <ng-template #manageVehicleAssignment_disable_modal>
+                      <div class="modal-header">
+                        <h4 class="modal-title pull-left">Manage Vehicle Assignment</h4>
+                        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                       Do you want to disable this vehicle to driver <br>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn mb-2 flat btn-sm btn-outline-warning" (click)="modalRef.hide()">Cancel</button>
+                        <button [hidden]="!assign.IsActive" type="button" class="btn mb-2 flat btn-sm btn-outline-danger" (click)="disableVehicleAssign(assign.ID,assign.Name); modalRef.hide()">Confirm</button>
+                      </div>
+                    </ng-template>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          
+            <div class="loader-wrapper incomponent" id="demoCardLoader" [style.display]="isLoading? 'block':'none'">
+              <div class="spinner">
+                <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="length" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                </svg>
+                <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                  <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                </svg>
+                <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                  <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                </svg>
+                <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                  <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+</div>  

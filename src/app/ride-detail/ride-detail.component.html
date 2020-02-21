@@ -1,0 +1,113 @@
+<div class="content">
+  <div class="card mb-4">
+    <div class="card-header p-0">
+      <ul class="nav nav-tabs active-thik nav-primary border-0" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link px-4 py-3 active rounded-0" id="home-tab" data-toggle="tab" href="#home" role="tab"
+            aria-controls="home" aria-selected="true" translate>ride_details_basic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 py-3 rounded-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+            aria-controls="profile" aria-selected="false" translate>ride_details_fare</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 py-3 rounded-0" id="review-tab" data-toggle="tab" href="#review" role="tab"
+            aria-controls="review" aria-selected="false" translate>ride_details_review</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 py-3 rounded-0" id="timeline-tab" data-toggle="tab" href="#timeline" role="tab"
+            aria-controls="timeline" aria-selected="false" >Timeline</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <p><span class="weight-400" translate>ride_details_basic_id</span><span class="text-muted">{{ ride.ID }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_pickup</span><span class="text-muted">{{ ride.PickupLocation }}</span>
+                  </p>
+                  <p><span class="weight-400" translate>ride_details_basic_drop</span><span class="text-muted">{{ ride.DropLocation }}</span></p>
+                  <hr class="my-4 dashed">
+                  <p><span class="weight-400" translate>ride_details_basic_bookingDate</span><span class="text-muted">{{ getFormattedDateTime(ride.RideDateTime) }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_startedDate</span><span
+                                        class="text-muted">{{ getFormattedDateTime(ride.RideStartTime) }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_completedDate</span><span
+                      class="text-muted">{{ getFormattedDateTime(ride.RideEndTime) }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_status</span><span class="text-muted" [style.color]="getStatusColor(ride.RideStatus)">{{ getRideStatusText(ride.RideStatus) }}</span>
+                  </p>
+                  
+                  <p><span class="weight-400" translate>ride_details_basic_passengerName</span><span class="text-muted">{{ ride.PassengerName }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_passengerMobile</span><span
+                      class="text-muted">+{{ ride.PassengerDialCode+"-"+ride.PassengerMobile }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_DriverName</span><span class="text-muted">{{ ride.DriverName }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_driverMobile</span><span
+                      class="text-muted">+{{ ride.DriverDialCode+"-"+ride.DriverMobile }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_vehicleName</span><span class="text-muted">{{ ride.VehicleName }}</span></p>
+                  <p><span class="weight-400" translate>ride_details_basic_vehicleNumber</span><span class="text-muted">{{ ride.VehicleNumber }}</span></p>
+            </div>
+            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <p><span class="weight-400" translate>ride_details_fare_area</span><span class="text-muted">{{ ride.ServiceArea }}</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_baseFare</span><span class="text-muted">{{ ride.Currency+ride.BaseFare }}</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_kmBaseFare</span><span
+                  class="text-muted">{{ ride.KmInBaseFare }} Km</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_minBaseFare</span><span
+                  class="text-muted">{{ ride.DurationInBaseFare }} Minutes</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_distance</span><span
+                  class="text-muted">{{ ride.Currency+ride.BaseDistanceFare }}/Km</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_duration</span><span
+                  class="text-muted">{{ ride.Currency+ride.BaseDurationFare }}/Minute</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_tax</span><span class="text-muted">{{ ride.TaxPercentage }}</span></p>
+              <hr class="my-4 dashed">
+          
+              <p><span class="weight-400" translate>ride_details_fare_totalDistance</span><span class="text-muted">{{ ride.Distance }} Km</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_totalDuration</span><span class="text-muted">{{ ride.Duration }} Minutes</span>
+              </p>
+              <p><span class="weight-400" translate>ride_details_fare_rideDistance</span><span
+                  class="text-muted">{{ ride.Currency + ride.DistanceFare }}</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_rideDuration</span><span
+                  class="text-muted">{{ ride.Currency+ ride.DurationFare }}</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_totalTax</span><span class="text-muted">{{ ride.Currency+ride.Tax }}</span></p>
+              <p><span class="weight-400" translate>ride_details_fare_totalRideFare</span><span
+                  class="text-muted">{{ ride.Currency+ride.TotalFare }}</span>
+              </p>
+            </div>
+            <div class="tab-pane fade show" id="review" role="tabpanel" aria-labelledby="profile-tab">
+              <h2 class="weight-300 h3 title" translate>ride_details_review_passenger</h2>
+              <p><span class="weight-400" translate>ride_details_review_passengerRating</span><span class="text-muted">{{ ride.PassengerRating }}</span></p>
+              <p><span class="weight-400" translate>ride_details_review_passenger</span><span class="text-muted">{{ ride.PassengerReview }}</span></p>
+              <hr class="my-4 dashed">
+          
+              <h2 class="weight-300 h3 title" translate>ride_details_review_driver</h2>
+              <p><span class="weight-400" translate>ride_details_review_driverRating</span><span class="text-muted">{{ ride.DriverRating }}</span></p>
+              <p><span class="weight-400" translate>ride_details_review_driver</span><span class="text-muted">{{ ride.DriverReview }}</span></p>
+              <hr class="my-4 dashed">
+              <hr class="my-4 dashed">
+        
+            </div>
+              <div class="tab-pane fade show" id="timeline" role="tabpanel" aria-labelledby="timeline-tab">
+                  <div *ngFor="let item of ride.TimeLine" >
+                    <h2 class="weight-300 h6 title" >{{item.Message}}</h2>
+                    <p><span class="weight-400 text-muted" >{{ getFormattedDateTime(item.CreatedAt)  }}</span></p>
+                    <hr class="my-4 dashed">
+
+                  </div>
+              </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <agm-map [latitude]="latitude" [fullscreenControl]="true" [longitude]="longitude" [zoom]="14">
+            <agm-polyline>
+              <agm-polyline-point *ngFor="let point of ride_locations" [latitude]="point.lat" [longitude]="point.lng">
+              </agm-polyline-point>
+            </agm-polyline>
+          </agm-map>
+        </div>
+      </div>
+      
+  
+    </div>
+  </div>
+  
+</div>
