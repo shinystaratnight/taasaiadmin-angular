@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c776ee41-45a9-433e-8f4b-46fe9be882c9" name="Default Changelist" comment="" />
+    <list default="true" id="c776ee41-45a9-433e-8f4b-46fe9be882c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-dispatcher/add-dispatcher.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-company/add-new-company.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-drivers/add-new-drivers.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-fare/add-new-fare.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-location/add-new-location.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-vehicle-type-category/add-new-vehicle-type-category.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-vehicle-type/add-new-vehicle-type.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-vehicles/add-new-vehicles.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-zone-fare/add-new-zone-fare.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-new-zone/add-new-zone.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth.guard.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/company-list/company-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/data.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/driver-detail/driver-detail.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/driver-document/driver-document.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/driver-list/driver-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-fare/edit-fare.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-operator/edit-operator.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-vehicle-category/edit-vehicle-category.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-vehicle-type/edit-vehicle-type.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/fare-list/fare-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/location-list/location-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/main/main.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/manage-vehicle-assignment/manage-vehicle-assignment.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/passenger-list/passenger-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/passenger-ride-history-list/passenger-ride-history-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/ride-detail/ride-detail.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/rides-list/rides-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vehicle-type-category-list/vehicle-type-category-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vehicle-type-list/vehicle-type-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/vehicles-list/vehicles-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/zone-fare-list/zone-fare-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/zone-list/zone-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tsconfig.spec.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -14,6 +63,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1WwOrx82OzIbMoWU56tUapyu8qH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,6 +73,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -29,6 +82,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\1_Work\Golang_Work\Tassai\admin\src\app\_helpers" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (AdminOnride)" type="JavaScriptTestRunnerKarma">
@@ -60,6 +118,18 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -78,6 +148,8 @@
       <workItem from="1581338401893" duration="178000" />
       <workItem from="1581497437640" duration="10000" />
       <workItem from="1581581257228" duration="1971000" />
+      <workItem from="1582616713553" duration="2188000" />
+      <workItem from="1582619344710" duration="856000" />
     </task>
     <servers />
   </component>
@@ -85,30 +157,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="134" key="GridCell.Tab.0.bottom" timestamp="1580918937424">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1813" height="295" key="GridCell.Tab.0.bottom" timestamp="1582620158348">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state width="1899" height="134" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580918937424" />
     <state width="1899" height="134" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1580885541622" />
     <state width="1419" height="304" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1580258052949" />
-    <state width="1899" height="134" key="GridCell.Tab.0.center" timestamp="1580918937417">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1813" height="295" key="GridCell.Tab.0.bottom/64.0.1856.1080@64.0.1856.1080" timestamp="1582620158348" />
+    <state width="1813" height="295" key="GridCell.Tab.0.center" timestamp="1582620158348">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state width="1899" height="134" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580918937417" />
     <state width="1899" height="134" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1580885541615" />
     <state width="1419" height="304" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1580258052946" />
-    <state width="1899" height="134" key="GridCell.Tab.0.left" timestamp="1580918937413">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1813" height="295" key="GridCell.Tab.0.center/64.0.1856.1080@64.0.1856.1080" timestamp="1582620158348" />
+    <state width="1813" height="295" key="GridCell.Tab.0.left" timestamp="1582620158348">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state width="1899" height="134" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580918937413" />
     <state width="1899" height="134" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1580885541609" />
     <state width="1419" height="304" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1580258052945" />
-    <state width="1899" height="134" key="GridCell.Tab.0.right" timestamp="1580918937420">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1813" height="295" key="GridCell.Tab.0.left/64.0.1856.1080@64.0.1856.1080" timestamp="1582620158348" />
+    <state width="1813" height="295" key="GridCell.Tab.0.right" timestamp="1582620158348">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state width="1899" height="134" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580918937420" />
     <state width="1899" height="134" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1580885541616" />
     <state width="1419" height="304" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1580258052948" />
+    <state width="1813" height="295" key="GridCell.Tab.0.right/64.0.1856.1080@64.0.1856.1080" timestamp="1582620158348" />
     <state x="678" y="272" key="SettingsEditor" timestamp="1580108206573">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

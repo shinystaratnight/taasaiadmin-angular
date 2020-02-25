@@ -1,5 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {AdminGuard} from './_helpers/admin.guard';
 import { LocationListComponent } from './location-list/location-list.component';
 import { VehicleTypeListComponent } from './vehicle-type-list/vehicle-type-list.component';
 import { FareListComponent } from './fare-list/fare-list.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: MainComponent,
+    canActivate: [AdminGuard],
     children: [
       {
         path: '',
