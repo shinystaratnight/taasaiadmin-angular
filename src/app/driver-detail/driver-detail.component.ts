@@ -3,6 +3,7 @@ import {DataService} from '../data.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder} from '@angular/forms';
 import {NotifierService} from 'angular-notifier';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-driver-detail',
@@ -10,6 +11,7 @@ import {NotifierService} from 'angular-notifier';
   styleUrls: ['./driver-detail.component.css']
 })
 export class DriverDetailComponent implements OnInit {
+  assetsUrl = environment.assetsUrl;
 
   ride: any;
   details: any;

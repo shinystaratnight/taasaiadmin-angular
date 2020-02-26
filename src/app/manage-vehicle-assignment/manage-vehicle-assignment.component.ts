@@ -9,6 +9,7 @@ import { shiftInitState } from '@angular/core/src/view';
 import { NotifierService } from 'angular-notifier';
 import { resolveRendererType2 } from '@angular/core/src/view/util';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {environment} from '../../environments/environment';
 
 
 @Component({
@@ -17,6 +18,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./manage-vehicle-assignment.component.css']
 })
 export class ManageVehicleAssignmentComponent implements OnInit {
+  assetsUrl = environment.assetsUrl;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;

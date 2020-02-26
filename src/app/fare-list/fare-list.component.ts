@@ -5,6 +5,7 @@ import { DataTableDirective } from 'angular-datatables';
 import { NotifierService } from 'angular-notifier';
 import { Router, ActivatedRoute} from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {environment} from '../../environments/environment';
 
 
 
@@ -14,6 +15,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./fare-list.component.css']
 })
 export class FareListComponent implements OnInit {
+  assetsUrl = environment.assetsUrl;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;

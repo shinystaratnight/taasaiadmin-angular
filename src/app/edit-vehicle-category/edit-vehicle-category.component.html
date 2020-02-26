@@ -8,7 +8,7 @@
           <form [formGroup]="vehicleCategoryForm">
             <div class="form-group">
               <label for="name" translate>vehicle_category_Edit_name</label>
-              <input type="text" formControlName="name" name="name" [(ngModel)]="name" class="form-control"
+              <input type="text" formControlName="name" id="name" name="name" [(ngModel)]="name" class="form-control"
                 placeholder="Enter Vehicle Category Name" [ngClass]="{'is-invalid': submitted && f.name.errors}"
                 autocomplete="off">
               <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
@@ -18,7 +18,7 @@
 
             <div class="form-group">
               <span><button (click)=onSubmit() class="btn btn-primary" translate>vehicle_category_Edit_submit</button></span>
-              <span style="margin-left: 20px;"><button (click)=onCancel()()
+              <span style="margin-left: 20px;"><button (click)=onCancel()
                   class="btn btn-danger" translate>vehicle_category_Edit_cancel</button></span>
             </div>
           </form>

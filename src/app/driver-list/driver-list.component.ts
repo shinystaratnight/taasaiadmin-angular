@@ -5,6 +5,7 @@ import { DataTableDirective } from 'angular-datatables';
 import { NotifierService } from 'angular-notifier';
 import { Router, ActivatedRoute} from '@angular/router';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-driver-list',
@@ -12,6 +13,7 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
   styleUrls: ['./driver-list.component.css']
 })
 export class DriverListComponent implements OnInit {
+  assetsUrl = environment.assetsUrl;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;

@@ -31,7 +31,7 @@
       <tr *ngFor="let vehicle of vehicles">
         <td>{{vehicle.vehicle_id}}</td>
         <td>{{vehicle.vehicle_name}}</td>
-        <td><img src="{{'http://35.197.237.60:4001/'+vehicle.image}}" height="40" width="40"/></td>
+        <td><img src="{{assetsUrl + vehicle.image}}" height="40" width="40"/></td>
         <td>{{vehicle.vehicle_type_name}}</td>
         <td>{{vehicle.location_name}}</td>
         <td>{{vehicle.vehicle_number}}</td>

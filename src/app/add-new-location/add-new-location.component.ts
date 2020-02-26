@@ -91,6 +91,10 @@ export class AddNewLocationComponent implements OnInit {
     return this.locationForm.controls;
   }
 
+  get docs(): FormGroup {
+    return this.locationForm.get("docs") as FormGroup;
+  }
+
   onDocsCountChange(value) {
     this.locationForm.setControl('docs', this.formBuilder.array([]));
     const fa = (this.locationForm.get('docs')as FormArray);

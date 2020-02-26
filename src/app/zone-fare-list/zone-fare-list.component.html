@@ -33,7 +33,7 @@
     <tbody>
       <tr *ngFor="let fare of fares">
         <td>{{fare.fare_id}}</td>
-        <td><img src="{{'http://35.197.237.60:4001/'+fare.vehicle_type_image}}" height="40" width="40" /></td>
+        <td><img src="{{assetsUrl + fare.vehicle_type_image}}" height="40" width="40" /></td>
         <td>{{fare.vehicle_type_name}}</td>
         <td>Rs {{fare.base_fare}} ({{fare.base_fare_distance+" Km & "+fare.base_fare_duration+" Minutes incl."}})</td>
         <td>RS {{fare.distance_fare}}</td>

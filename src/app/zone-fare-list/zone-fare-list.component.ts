@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { NotifierService } from 'angular-notifier';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-zone-fare-list',
@@ -12,6 +13,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./zone-fare-list.component.css']
 })
 export class ZoneFareListComponent implements OnInit {
+  assetsUrl = environment.assetsUrl;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;

@@ -32,7 +32,7 @@
     <tbody>
       <tr *ngFor="let driver of drivers">
         <td>{{driver.driver_id}}</td>
-        <td> <img src="{{'http://35.197.237.60:4001/'+driver.driver_image}}" height="40" width="40"/> {{driver.driver_name}}</td>
+        <td> <img src="{{assetsUrl + driver.driver_image}}" height="40" width="40"/> {{driver.driver_name}}</td>
         <td>{{"+"+driver.dial_code+" "+driver.mobile_number}}</td>
         <td>{{driver.vehicle_name+" - " + driver.vehicle_number}}</td>
         <td>{{driver.operator_name}}</td>

@@ -30,8 +30,8 @@
       <tr *ngFor="let vehicletype of vehicletypes">
         <td>{{vehicletype.ID}}</td>
         <td>{{vehicletype.Name}}</td>
-        <td><img src="{{'http://35.197.237.60:4001/'+vehicletype.Image}}" height="50" width="50"/></td>
-        <td><img src="{{'http://35.197.237.60:4001/'+vehicletype.ImageActive}}" height="50" width="50"/></td>
+        <td><img src="{{assetsUrl + vehicletype.Image}}" height="50" width="50"/></td>
+        <td><img src="{{assetsUrl + vehicletype.ImageActive}}" height="50" width="50"/></td>
         <td>
           <span [hidden]="!vehicletype.IsActive" class="badge badge-pill badge-success" style="padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;color:#FFFFFF;font-size: 12px;" translate>vehicle_type_enabled</span>
           <span [hidden]="vehicletype.IsActive" class="badge badge-pill badge-danger" style="padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;color:#FFFFFF;font-size: 12px;" translate>vehicle_type_disabled</span>

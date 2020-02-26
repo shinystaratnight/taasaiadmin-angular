@@ -22,6 +22,7 @@ export class PassengerRideHistoryListComponent implements OnInit {
   passenger_id:number;
   passenger_name:string;
   passenger_ride:any;
+  isLoading: boolean;
 
   constructor(private router:ActivatedRoute,private dataService:DataService,private notifier:NotifierService,private modalService: BsModalService,private routers:Router ) { }
 

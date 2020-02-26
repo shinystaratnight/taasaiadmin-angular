@@ -30,6 +30,7 @@ export class AddDispatcherComponent implements OnInit {
   drop_location = false ;
   location_direction =false;
   submitted = false;
+  mobile = "";
 
   constructor(private dataservice:DataService,private router:Router,private formbuilder:FormBuilder) { }
 

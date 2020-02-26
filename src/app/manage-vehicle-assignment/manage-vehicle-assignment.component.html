@@ -60,7 +60,7 @@
                   <td>{{assign.ID}}</td>
                   <td>{{assign.Name}}</td>
                   <td>{{assign.VehicleNumber}}</td>
-                  <td><img src="{{'http://35.197.237.60:4001/'+assign.Image}}" height="30" width="40"/></td>
+                  <td><img src="{{assetsUrl + assign.Image}}" height="30" width="40"/></td>
                   <td>
                     <span [hidden]="!assign.IsActive" class="badge badge-pill badge-success" style="padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;color:#FFFFFF;font-size: 12px;" translate>assign_vehicle_enabled</span>
                     <span [hidden]="assign.IsActive" class="badge badge-pill badge-danger" style="padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;color:#FFFFFF;font-size: 12px;" translate>assign_vehicle_disabled</span>

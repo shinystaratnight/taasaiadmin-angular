@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-const baseURL = 'http://35.197.237.60:4001/admin';
+import {environment} from '../environments/environment';
+const baseURL = environment.baseUrl;
 
 @Injectable({
   providedIn: 'root'

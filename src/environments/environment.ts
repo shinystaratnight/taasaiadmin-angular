@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://35.197.237.60:4001/admin',
+  baseUrl: 'http://localhost/admin',
+  assetsUrl: 'http://localhost/',
 };
 
 /*
