@@ -67,8 +67,12 @@ export class DataService {
   enableZone(id: number) {
     return this.http.put(baseURL + '/enableZone/' + id, {});
   }
-  getVehicleTypes(id: string) {
-    return this.http.get(baseURL + '/getVehicleTypes/' + id);
+  getVehicleTypes(id?: string) {
+    if (!!id) {
+      return this.http.get(baseURL + '/getVehicleTypes/' + id);
+    } else {
+      return this.http.get(baseURL + '/getVehicleTypes');
+    }
   }
 
   getVehicleTypeWithID(id: number) {

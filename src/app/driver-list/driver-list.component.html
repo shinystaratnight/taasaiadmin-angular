@@ -12,6 +12,13 @@
     </div>
   </div-->
 
+  <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
+    <div class="controls d-flex justify-content-center justify-content-md-end">
+      <button type="button" routerLink="new" routerLinkActive="active" style="cursor:pointer;" class="btn btn-primary" style="float:right" ><span class="material-icons mr-2 align-top">add</span>Add New Operator</button>
+      <!--      <button [hidden]="!isAdmin" type="button" routerLink="new" routerLinkActive="active" style="cursor:pointer;" class="btn btn-primary" style="float:right" ><span class="material-icons mr-2 align-top">add</span>Add New Operator</button>-->
+
+    </div>
+  </div>
 </div>
 
 <div class="content">
@@ -44,6 +51,7 @@
         </td>
         <td>
           <button :routerLink="{{driver.driver_id}}" type="button" class="btn mb-2 flat btn-sm btn-outline-success"  >View Details</button>
+          <button :routerLink="new/{{driver.driver_id}}" type="button" class="btn mb-2 flat btn-sm btn-outline-success"  >Edit</button>
           <ng-template #driver_disable_modal>
             <div class="modal-header">
               <h4 class="modal-title pull-left">Driver</h4>
