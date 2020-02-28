@@ -95,8 +95,39 @@ export class DriverDetailComponent implements OnInit {
     return status[id];
   }
 
-  downloadFile(url, name, document, ext) {
-    this.dataService.downloadFile(url, `${name}-${document}.${ext}`);
-    console.log(url, name, document, ext);
+  downloadFile(url, name, doc, ext) {
+    // this.dataService.downloadFile(url, `${name}-${document}.${ext}`);
+    this.dataService.getDriverDocument(url)
+      .subscribe(data => {
+        console.log(data);
+        let url = window.URL.createObjectURL(data);
+        const element = document.createElement('a');
+        element.setAttribute('href', url);
+        element.setAttribute('download', `${name}-${doc}.${ext}`);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      });
+    // console.log(document.getElementById(doc));
+    console.log(`${name}-${doc}.${ext}`);
+
+    // let img = document.getElementById(doc) as HTMLImageElement;
+    // blobUtil.imgSrcToBlob(img.src).then(function (blob) {
+    //   let url = window.URL.createObjectURL(blob);
+    //   const element = document.createElement('a');
+    //   element.setAttribute('href', url);
+    //   element.setAttribute('download', `${name}-${doc}`);
+    //
+    //   element.style.display = 'none';
+    //   document.body.appendChild(element);
+    //
+    //   element.click();
+    //
+    //   document.body.removeChild(element);
+    // });
   }
 }

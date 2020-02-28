@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import {environment} from '../environments/environment';
+import {Observable} from 'rxjs';
 const baseURL = environment.baseUrl;
 
 @Injectable({
@@ -337,19 +338,12 @@ export class DataService {
     return this.http.get(baseURL + '/getRidesForPassenger/' + passengerId);
   }
 
-  downloadFile(url, name) {
-    return this.http.get(url, {responseType: 'blob'}).subscribe(data => {
-      let url = window.URL.createObjectURL(data);
-      const element = document.createElement('a');
-      element.setAttribute('href', url);
-      element.setAttribute('download', name);
+  getDriverDocument(fileName) {
+    return this.http.get(baseURL + '/getDriverDocument/' + fileName, {responseType: 'blob'});
+  }
 
-      element.style.display = 'none';
-      document.body.appendChild(element);
-
-      element.click();
-
-      document.body.removeChild(element);
-    });
+  downloadFile(url, name): Observable<any> {
+    // return this.http.get(url);
+    return this.http.get(url, {responseType: 'blob', headers: {}});
   }
 }
