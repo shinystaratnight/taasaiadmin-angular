@@ -94,4 +94,9 @@ export class DriverDetailComponent implements OnInit {
     const status = ['#e67e22', '#3498db', '#2980b9', '#2ecc71', '#1abc9c', '#d35400', '#e74c3c'];
     return status[id];
   }
+
+  downloadFile(url, name, document, ext) {
+    this.dataService.downloadFile(url, `${name}-${document}.${ext}`);
+    console.log(url, name, document, ext);
+  }
 }

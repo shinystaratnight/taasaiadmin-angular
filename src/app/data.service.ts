@@ -336,4 +336,20 @@ export class DataService {
   getRidesForPassenger(passengerId: number) {
     return this.http.get(baseURL + '/getRidesForPassenger/' + passengerId);
   }
+
+  downloadFile(url, name) {
+    return this.http.get(url, {responseType: 'blob'}).subscribe(data => {
+      let url = window.URL.createObjectURL(data);
+      const element = document.createElement('a');
+      element.setAttribute('href', url);
+      element.setAttribute('download', name);
+
+      element.style.display = 'none';
+      document.body.appendChild(element);
+
+      element.click();
+
+      document.body.removeChild(element);
+    });
+  }
 }
