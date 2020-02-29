@@ -55,7 +55,6 @@ export class RidesListComponent implements OnInit {
     this.dataService.getRides(ride_status).subscribe((data:any)=>{
       this.rides = data
       this.rerender()
-      console.log(this.rides)
     });
   }
 

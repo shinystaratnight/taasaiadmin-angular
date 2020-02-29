@@ -325,6 +325,9 @@ export class DataService {
   getRides(RideStatus: string) {
     return this.http.post(baseURL + '/getRides', {RideStatus: parseInt(RideStatus)});
   }
+  getRidesByDriver(driverId: string) {
+    return this.http.get(baseURL + '/getRidesByDriver/' + driverId);
+  }
   addNewCompany(Commission: number, Name: string, Email: string, Password: string, ConfirmPassword: string, Locations: any) {
     // tslint:disable-next-line:radix
     console.log(parseInt(Locations));

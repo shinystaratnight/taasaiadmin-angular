@@ -10,11 +10,15 @@
           <a class="nav-link px-4 py-3 rounded-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
              aria-controls="profile" aria-selected="false" >Documents</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 py-3 rounded-0" id="history-tab" data-toggle="tab" href="#history" role="tab"
+             aria-controls="profile" aria-selected="false" >History</a>
+        </li>
       </ul>
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <img src="{{assetsUrl + details.DriverDetails.DriverImage}}" height="160" width="160" style="margin-bottom: 30px;"/>
@@ -45,6 +49,72 @@
               </div>
               <hr class="my-4 dashed">
 
+            </div>
+            <div class="tab-pane fade show" id="history" role="tabpanel" aria-labelledby="history-tab">
+                  <div class="row page-tilte align-items-center">
+                    <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
+                      <div class="controls d-flex justify-content-center justify-content-md-end">
+                        <form>
+
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+
+<!--                  <div class="content">-->
+                    <div class="row">
+                      <div class="col-md-12">
+                    <table datatable [dtOptions]="dtOptions"  [dtTrigger]="dtTrigger" id="example"  class="table table-striped mb-4 bg-white table-bordered">
+                      <thead>
+                      <tr>
+                        <th translate>ride_list_id</th>
+                        <th translate>ride_list_passenger</th>
+                        <th translate>ride_list_pickup_location</th>
+                        <th translate>ride_list_drop_location</th>
+                        <th translate>ride_list_booking_time</th>
+                        <th translate>Duration</th>
+                        <th translate>Fare</th>
+                        <th translate>ride_list_status</th>
+<!--                        <th translate>ride_list_action</th>-->
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let ride of rides">
+                        <td>{{ride.ID}}</td>
+                        <td >{{ride.PassengerName}}</td>
+                        <td class="text-wrap">{{ride.PickupLocation}}</td>
+                        <td class="text-wrap">{{ride.DropLocation}}</td>
+                        <td class="text-wrap">{{ getFormattedDateTime(ride.RideDateTime) }}</td>
+                        <td class="text-wrap">{{ride.DurationReadable}}</td>
+                        <td class="text-wrap">{{ride.TotalFare}}</td>
+                        <td class="text-wrap"><span [style.color]="getStatusColor(ride.RideStatus)">{{ getRideStatusText(ride.RideStatus) }}</span></td>
+    <!--                    <td>-->
+    <!--                      <button type="button" style="cursor:pointer;" class="btn mb-2 flat btn-sm btn-outline-success" (click)="navigateToRideDetail(ride.ID)" routerLinkActive="router-link-active" translate>ride_list_view</button>-->
+    <!--                    </td>-->
+
+                      </tr>
+                      </tbody>
+                    </table>
+                    <div class="loader-wrapper incomponent" id="demoCardLoader" [style.display]="isLoading? 'block':'none'">
+                      <div class="spinner">
+                        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="length" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                        </svg>
+                        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                        </svg>
+                        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                        </svg>
+                        <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+<!--                </div>-->
+              </div>
             </div>
           </div>
         </div>
