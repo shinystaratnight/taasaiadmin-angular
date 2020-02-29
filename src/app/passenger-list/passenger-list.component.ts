@@ -40,7 +40,7 @@ export class PassengerListComponent implements OnInit {
   }
 
   onViewPassengerHistory(id:number,name:string){
-    this.router.navigate(["admin/passengerRideHistory/" + id + "/" + name])
+    this.router.navigate(["passengerRideHistory/" + id + "/" + name])
   }
 
   ngOnDestroy(): void {

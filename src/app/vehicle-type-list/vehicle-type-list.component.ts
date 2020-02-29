@@ -45,7 +45,7 @@ export class VehicleTypeListComponent implements OnInit {
     }
 
     navigateToEdit(id: number, name: string) {
-        this.router.navigate(['admin/vehicletypecategory/types/' + this.category_id + '/' + this.category_name + '/edit/' + name + '/' + id]);
+        this.router.navigate(['vehicletypecategory/types/' + this.category_id + '/' + this.category_name + '/edit/' + name + '/' + id]);
     }
 
     ngOnDestroy(): void {

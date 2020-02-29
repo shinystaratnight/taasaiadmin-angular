@@ -124,6 +124,6 @@ export class AddNewVehiclesComponent implements OnInit {
     this.navigateVehicleList()
   }
   navigateVehicleList() {
-    this.router.navigate(["admin/companies/" + this.company_id + "/" + this.company_name + "/vehicles"])
+    this.router.navigate(["companies/" + this.company_id + "/" + this.company_name + "/vehicles"])
   }
 }

@@ -12,26 +12,26 @@
 
     <nav class="navigation">
       <ul>
-        <li [hidden]="!isAdmin"  routerLink="dashboard" [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard" translate><span class="nav-icon material-icons">web</span>
+        <li [hidden]="!isAdmin"  routerLink="/dashboard" [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard" translate><span class="nav-icon material-icons">web</span>
             _dashboard<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a> </li>
             <hr>
-        <li [hidden]="!isAdmin" routerLink="vehicletypecategory" routerLinkActive="active" class="" style="cursor:pointer;"><a
+        <li [hidden]="!isAdmin" routerLink="/vehicletypecategory" routerLinkActive="active" class="" style="cursor:pointer;"><a
             title="Dashboard"><span class="nav-icon material-icons">local_car_wash</span>
             Vehicle Categories<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
 
-        <li [hidden]="!isAdmin" routerLink="locations" routerLinkActive="active" class="" style="cursor:pointer;"><a  title="Dashboard"><span class="nav-icon material-icons">location_on</span>
+        <li [hidden]="!isAdmin" routerLink="/locations" routerLinkActive="active" class="" style="cursor:pointer;"><a  title="Dashboard"><span class="nav-icon material-icons">location_on</span>
             Operators<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
 
-        <li [hidden]="isAdmin" routerLink="locations" routerLinkActive="active" class="" style="cursor:pointer;"><a  title="Dashboard"><span class="nav-icon material-icons">location_on</span>
+        <li [hidden]="isAdmin" routerLink="/locations" routerLinkActive="active" class="" style="cursor:pointer;"><a  title="Dashboard"><span class="nav-icon material-icons">location_on</span>
             Operator <span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
-        <li [hidden]="isAdmin" routerLink="documents" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span
+        <li [hidden]="isAdmin" routerLink="/documents" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span
                 class="nav-icon material-icons">contacts</span> Driver Documents<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
-        <li routerLink="drivers" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span
+        <li routerLink="/drivers" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span
                 class="nav-icon material-icons">contacts</span> Drivers<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
 
-        <li routerLink="rides" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span class="nav-icon material-icons">swap_calls</span>
+        <li routerLink="/rides" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span class="nav-icon material-icons">swap_calls</span>
             Rides<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
-        <li routerLink="passenger" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span
+        <li routerLink="/passenger" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span
               class="nav-icon material-icons">contacts</span> Passengers<span class="toogle-sub-nav material-icons">keyboard_arrow_right</span></a></li>
                     <hr>
         <!--li routerLink="promocode" routerLinkActive="active" class="" style="cursor:pointer;"><a title="Dashboard"><span

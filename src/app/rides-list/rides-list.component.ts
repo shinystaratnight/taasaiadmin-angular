@@ -68,7 +68,7 @@ export class RidesListComponent implements OnInit {
   }
 
   navigateToRideDetail(id:string){
-    this.router.navigate(["admin/rides/"+id])
+    this.router.navigate(["rides/"+id])
   }
 
   getRideStatusText(id:number){

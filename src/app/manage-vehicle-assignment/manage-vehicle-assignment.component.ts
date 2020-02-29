@@ -105,7 +105,7 @@ enableVehicleAssign(id: number,name:string) {
   }
 
   onCancel(){
-    this.router.navigate(["admin/drivers"])
+    this.router.navigate(["drivers"])
   }
 
   onSubmit(){

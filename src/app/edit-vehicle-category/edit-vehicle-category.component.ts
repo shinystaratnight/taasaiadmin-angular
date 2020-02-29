@@ -35,7 +35,7 @@ export class EditVehicleCategoryComponent implements OnInit {
   }
 
   onCancel() {
-    this.router.navigate(["admin/vehicletypecategory"])
+    this.router.navigate(["vehicletypecategory"])
   }
 
   onSubmit() {
@@ -49,7 +49,7 @@ export class EditVehicleCategoryComponent implements OnInit {
           type: 'success',
           message: this.name + ' ' + 'Vehicle Type Category is updated Successfully',
         });
-        this.router.navigate(["admin/vehicletypecategory"])
+        this.router.navigate(["vehicletypecategory"])
       } else {
         this.notifier.show({
           type: 'warning',

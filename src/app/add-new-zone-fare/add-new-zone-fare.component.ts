@@ -93,7 +93,7 @@ export class AddNewZoneFareComponent implements OnInit {
           message: data.Message,
 
         });
-        this.router.navigate(['admin/locations/zones/' + this.location_id + '/' + this.location_name + '/fares']);
+        this.router.navigate(['locations/zones/' + this.location_id + '/' + this.location_name + '/fares']);
       } else {
         this.notifier.show({
           type: 'error',
@@ -103,6 +103,6 @@ export class AddNewZoneFareComponent implements OnInit {
     });
   }
   onCancel() {
-    this.router.navigate(['admin/locations/zones/' + this.location_id + '/' + this.location_name + '/fares']);
+    this.router.navigate(['locations/zones/' + this.location_id + '/' + this.location_name + '/fares']);
   }
 }

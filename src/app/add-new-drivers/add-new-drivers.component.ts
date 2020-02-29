@@ -214,6 +214,6 @@ export class AddNewDriversComponent implements OnInit {
   }
 
   // navigateToDriverList() {
-  //   this.router.navigate(['admin/companies/' + this.company_id + '/' + this.company_name + '/drivers']);
+  //   this.router.navigate(['companies/' + this.company_id + '/' + this.company_name + '/drivers']);
   // }
 }

@@ -44,11 +44,11 @@ export class VehicleTypeCategoryListComponent implements OnInit {
     });
   }
   navigateToTypeList(id:number,name:string){
-    this.router.navigate(["admin/vehicletypecategory/types/" + id+"/"+name])
+    this.router.navigate(["vehicletypecategory/types/" + id+"/"+name])
   }
 
   navigateToEdit(id: number, name: string) {
-    this.router.navigate(["admin/vehicletypecategory/edit/" + name + "/" + id])
+    this.router.navigate(["vehicletypecategory/edit/" + name + "/" + id])
   }
   disablevehicleCategory(id:number,name:string){
     this.isLoading = true

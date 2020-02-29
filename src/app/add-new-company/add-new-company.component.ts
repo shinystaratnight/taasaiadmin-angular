@@ -72,7 +72,7 @@ export class AddNewCompanyComponent implements OnInit {
         type: 'success',
         message: this.name + ' ' + data.Message,
         });
-        this.router.navigate(["admin/companies"])
+        this.router.navigate(["companies"])
       }
       else{
         this.notifier.show({
@@ -83,7 +83,7 @@ export class AddNewCompanyComponent implements OnInit {
     });
 }
   onCancel() {
-    this.router.navigate(["admin/companies"])
+    this.router.navigate(["companies"])
   }
 
 }

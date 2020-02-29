@@ -36,13 +36,14 @@ import {EditFareComponent} from './edit-fare/edit-fare.component';
 import {EditOperatorComponent} from './edit-operator/edit-operator.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'admin',
+  //   pathMatch: 'full'
+  // },
   {
+    // path: 'admin',
     path: '',
-    redirectTo: 'admin',
-    pathMatch: 'full'
-  },
-  {
-    path: 'admin',
     component: MainComponent,
     canActivate: [AdminGuard],
     children: [

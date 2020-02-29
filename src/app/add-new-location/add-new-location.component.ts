@@ -156,7 +156,7 @@ export class AddNewLocationComponent implements OnInit {
           message: this.name + ' ' + data.Message,
 
         });
-        this.router.navigate(['admin/locations']);
+        this.router.navigate(['locations']);
       } else {
         this.notifier.show({
           type: 'error',
@@ -167,7 +167,7 @@ export class AddNewLocationComponent implements OnInit {
     });
   }
   onCancel() {
-    this.router.navigate(['admin/locations']);
+    this.router.navigate(['locations']);
   }
 
 }

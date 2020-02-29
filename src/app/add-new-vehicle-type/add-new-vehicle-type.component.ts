@@ -76,7 +76,7 @@ export class AddNewVehicleTypeComponent implements OnInit {
       type: 'success',
       message: this.name + ' ' + data.Message,
       });
-      this.router.navigate(["admin/vehicletypecategory/types/" + this.vehicle_category_id+"/"+this.category_name])
+      this.router.navigate(["vehicletypecategory/types/" + this.vehicle_category_id+"/"+this.category_name])
     }
     else{
       this.notifier.show({
@@ -87,7 +87,7 @@ export class AddNewVehicleTypeComponent implements OnInit {
   });
   }
   onCancel(){
-    this.router.navigate(["admin/vehicletypecategory/types/" + this.vehicle_category_id+"/"+this.category_name])
+    this.router.navigate(["vehicletypecategory/types/" + this.vehicle_category_id+"/"+this.category_name])
   }
 }
 

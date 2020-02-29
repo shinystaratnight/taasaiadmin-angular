@@ -79,7 +79,7 @@ export class ZoneListComponent implements OnInit {
     }
 
     navigateToZoneFareList(id: number, name: string) {
-        this.router.navigate(['admin/locations/zones/' + id + '/' + name + '/fares']);
+        this.router.navigate(['locations/zones/' + id + '/' + name + '/fares']);
     }
 
     rerender(): void {

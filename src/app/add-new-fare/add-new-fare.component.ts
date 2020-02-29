@@ -97,7 +97,7 @@ export class AddNewFareComponent implements OnInit {
               message:  data.Message,
 
           });
-          this.router.navigate(['admin/locations/fares/' + this.location_id + '/' + this.location_name + '/' + this.location_currency ]);
+          this.router.navigate(['locations/fares/' + this.location_id + '/' + this.location_name + '/' + this.location_currency ]);
         } else {
           this.notifier.show({
             type: 'error',
@@ -107,6 +107,6 @@ export class AddNewFareComponent implements OnInit {
     });
   }
   onCancel() {
-    this.router.navigate(['admin/locations/fares/' + this.location_id + '/' + this.location_name + '/' + this.location_name]);
+    this.router.navigate(['locations/fares/' + this.location_id + '/' + this.location_name + '/' + this.location_name]);
   }
 }

@@ -75,7 +75,7 @@ export class FareListComponent implements OnInit {
     });
   }
   navigateToEdit(){
-    this.navRouter.navigate(['admin/locations/editfares/' + this.location_id + '/' + this.location_name ]);
+    this.navRouter.navigate(['locations/editfares/' + this.location_id + '/' + this.location_name ]);
   }
   openModal(Fare_disable_modal) {
     this.modalRef = this.modalService.show(Fare_disable_modal);

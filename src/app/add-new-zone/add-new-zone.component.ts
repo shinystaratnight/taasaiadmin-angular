@@ -180,7 +180,7 @@ export class AddNewZoneComponent implements OnInit {
                     message: this.name + ' ' + result.Message,
 
                 });
-                this.router.navigate(['admin/locations/zones/' + this.location_id + '/' + this.location_name]);
+                this.router.navigate(['locations/zones/' + this.location_id + '/' + this.location_name]);
             } else {
                 this.notifier.show({
                     type: 'error',
@@ -192,6 +192,6 @@ export class AddNewZoneComponent implements OnInit {
     }
 
     onCancel() {
-        this.router.navigate(['admin/locations/zones/' + this.location_id + "/" + this.location_name])
+        this.router.navigate(['locations/zones/' + this.location_id + "/" + this.location_name])
     }
 }

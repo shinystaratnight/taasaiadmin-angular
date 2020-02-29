@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'http://192.168.40.131:4001/admin',
-  assetsUrl: 'http://192.168.40.131:4001/',
+  assetsUrl: 'http://192.168.40.131:4001/admin/',
 };
 
 /*

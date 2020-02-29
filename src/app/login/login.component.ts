@@ -22,9 +22,9 @@ export class LoginComponent implements OnInit {
             if (data.Status) {
                 alert(data.Message);
                 if (data.IsAdmin) {
-                    this.router.navigate(['admin/dashboard']);
+                    this.router.navigate(['dashboard']);
                 } else {
-                    this.router.navigate(['admin/locations']);
+                    this.router.navigate(['locations']);
 
                 }
             } else {

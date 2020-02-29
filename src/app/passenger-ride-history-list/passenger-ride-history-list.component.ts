@@ -57,7 +57,7 @@ export class PassengerRideHistoryListComponent implements OnInit {
   }
 
   navigateToRideDetail(id:string){
-    this.routers.navigate(["admin/rides/"+id])
+    this.routers.navigate(["rides/"+id])
   }
 
   getRideStatusText(id:number){

@@ -62,14 +62,14 @@ export class LocationListComponent implements OnInit,OnDestroy {
     })
   }
   navigateToFareList(id:number,name:string,currency:string){
-    this.router.navigate(["admin/locations/fares/"+id+"/"+name+"/"+currency])
+    this.router.navigate(["locations/fares/"+id+"/"+name+"/"+currency])
   }
   navigateToEdit(id:number,name:string,currency:string){
-    this.router.navigate(["admin/editOperator/"+id+"/"+name])
+    this.router.navigate(["editOperator/"+id+"/"+name])
   }
 
   navigateToZoneList(id: number, name: string) {
-    this.router.navigate(["admin/locations/zones/" + id + "/" + name])
+    this.router.navigate(["locations/zones/" + id + "/" + name])
   }
   disableLocation(id:number,name:string){
     this.isLoading = true

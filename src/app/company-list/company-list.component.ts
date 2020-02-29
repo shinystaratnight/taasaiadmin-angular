@@ -55,11 +55,11 @@ export class CompanyListComponent implements OnInit {
     })
   }
   navigateToDriverList(id: number, name: string) {
-    this.router.navigate(["admin/companies/" + id + "/" + name + "/drivers"])
+    this.router.navigate(["companies/" + id + "/" + name + "/drivers"])
   }
 
   navigateVehicleList(id: number, name: string) {
-    this.router.navigate(["admin/companies/" + id + "/" + name +"/vehicles"])
+    this.router.navigate(["companies/" + id + "/" + name +"/vehicles"])
   }
   disableCompany(id: number, name: string) {
     this.isLoading = true

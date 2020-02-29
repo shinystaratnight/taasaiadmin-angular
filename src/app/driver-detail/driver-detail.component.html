@@ -75,6 +75,7 @@
                         <th translate>ride_list_booking_time</th>
                         <th translate>Duration</th>
                         <th translate>Fare</th>
+                        <th translate>Commission</th>
                         <th translate>ride_list_status</th>
 <!--                        <th translate>ride_list_action</th>-->
                       </tr>
@@ -88,6 +89,7 @@
                         <td class="text-wrap">{{ getFormattedDateTime(ride.RideDateTime) }}</td>
                         <td class="text-wrap">{{ride.DurationReadable}}</td>
                         <td class="text-wrap">{{ride.TotalFare}}</td>
+                        <td class="text-wrap">{{ride.PlatformFee}}</td>
                         <td class="text-wrap"><span [style.color]="getStatusColor(ride.RideStatus)">{{ getRideStatusText(ride.RideStatus) }}</span></td>
     <!--                    <td>-->
     <!--                      <button type="button" style="cursor:pointer;" class="btn mb-2 flat btn-sm btn-outline-success" (click)="navigateToRideDetail(ride.ID)" routerLinkActive="router-link-active" translate>ride_list_view</button>-->

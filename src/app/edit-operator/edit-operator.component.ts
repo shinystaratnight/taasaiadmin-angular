@@ -190,7 +190,7 @@ export class EditOperatorComponent implements OnInit {
           message: this.name + ' ' + data.Message,
 
         });
-        this.router.navigate(['admin/locations']);
+        this.router.navigate(['locations']);
       } else {
         this.notifier.show({
           type: 'error',
@@ -201,7 +201,7 @@ export class EditOperatorComponent implements OnInit {
     });
   }
   onCancel() {
-    this.router.navigate(['admin/locations']);
+    this.router.navigate(['locations']);
   }
 
 }
